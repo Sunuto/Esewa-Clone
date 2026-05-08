@@ -1,0 +1,32 @@
+.partner-slides-container {
+  overflow: hidden;
+  width: 100%;
+  height: 8rem; /* adjust for logo height */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.partner-slides-track {
+  display: flex;
+  width: max-content;
+  animation-name: scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  transition: none;
+}
+
+/* Pause animation on hover */
+.partner-slides-container:hover .partner-slides-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
